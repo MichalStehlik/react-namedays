@@ -8,7 +8,7 @@ const Names = (props) => {
     }
     else if (props.busy)
     {
-        return <Spinner />;
+        return <div className="text-center m-3"><Spinner /></div>;
     } 
     else if (props.name_us !== "" ) {
         return (

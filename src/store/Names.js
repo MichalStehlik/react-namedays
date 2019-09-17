@@ -44,10 +44,10 @@ export const reducer = (state, action) => {
             return {error: "", busy: false, ...action.payload.data.data};
         }
         case FETCH_NAMES + "_" + ActionType.Pending: {
-            return {error: "", busy: true, ...state};
+            return {...state, error: "", busy: true};
         }
         case FETCH_NAMES + "_" + ActionType.Rejected: {
-            return {error: action.payload.error, busy: false, ...state};
+            return {...state, error: action.payload.error, busy: false};
         }
         default : {
             return state;
