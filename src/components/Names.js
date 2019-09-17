@@ -4,11 +4,11 @@ import { Table, Alert, Spinner } from 'reactstrap';
 
 const Names = (props) => {
     if (props.error) {
-        return <Alert color="danger">Došlo k chybě</Alert>;
+        return <Alert color="danger">Došlo k chybě.</Alert>;
     }
     else if (props.busy)
     {
-        return <Spinner />;
+        return <div className="text-center"><Spinner className="m-3" /></div>;
     } 
     else if (props.name_us !== "" ) {
         return (
